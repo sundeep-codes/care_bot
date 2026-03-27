@@ -201,10 +201,17 @@ async function sendMessage() {
 
   if (WEBHOOK_URL && !WEBHOOK_URL.includes("YOUR-N8N")) {
     try {
+      // Get or create unique session ID for this user
+      let sessionId = localStorage.getItem("carebot-session");
+      if (!sessionId) {
+        sessionId = Math.random().toString(36).substring(2, 15);
+        localStorage.setItem("carebot-session", sessionId);
+      }
+
       const res = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ message: text, sessionId: sessionId }),
       });
       const data = await res.json();
       reply = data.reply || data.message || data.text || null;
