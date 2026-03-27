@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 
-const WEBHOOK_URL = 'https://bin.codeveritus.tech/webhook-test/sundeep'
+const WEBHOOK_URL = 'https://bin.codeveritus.tech/webhook/210b9846-c24b-42a5-b4bf-1a11dfa2abea/chat'
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false)
