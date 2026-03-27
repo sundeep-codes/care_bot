@@ -1,6 +1,6 @@
 /* ── app.js – CareBot Hospital Assistant ── */
 
-const WEBHOOK_URL = "https://YOUR-N8N-WEBHOOK"; // Replace with your n8n webhook URL
+const WEBHOOK_URL = "https://bin.codeveritus.tech/webhook/210b9846-c24b-42a5-b4bf-1a11dfa2abea/chat"; // Replace with your n8n webhook URL
 
 // ─── THEME TOGGLE ───
 const html = document.documentElement;
